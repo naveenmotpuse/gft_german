@@ -1,0 +1,164 @@
+﻿<html lang="en">
+<head>
+    
+    <title>Gains From Trade</title> 
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="styles/font.css" rel="stylesheet" />
+    <link href="scripts/external/menu/menu.css" rel="stylesheet" />
+    <link href="styles/layout.css" rel="stylesheet" />
+    <link href="styles/module.css" rel="stylesheet" />
+    <link href="styles/device.css" rel="stylesheet" />
+
+    <script src="scripts/external/jquery-2.1.4.min.js"></script>
+    <script src="scripts/external/highcharts.js"></script>
+    <script src="scripts/external/menu/menu.js"></script>    
+    <script src="scripts/common.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/caching.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/navigator.js"></script>
+    <script src="scripts/question.js"></script>
+    <script src="scripts/modulesCharts.js"></script>
+    <script src="scripts/gft.js"></script>
+    <script src="scripts/level.js"></script>
+    <script src="scripts/module.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/animate.js"></script>
+    <script src="scripts/events.js"></script>
+
+    <script src="scripts/external/cooker.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=MML_HTMLorMML"></script>
+</head>
+
+<body>
+    <div id="wrapper" class="mxwidth">
+        <header role="banner">
+            <center>                
+                <div id="header-content" class="mxwidth">
+                    <div id="header-title">
+                        <h1 id="pagetitle" >Gains From Trade</h1>
+                        <ul id="appmenu" class="wrapper">
+                            <li class="menu-icon" role="menu" aria-haspopup="false" tabindex="1">
+                                <img src="scripts/external/menu/menu-icon.png" alt="" aria-hidden="true">
+                                <ul role="menu">
+                                    <li role="menuitem"   aria-hidden="true" style="display: none;">
+                                        <a href="javascript:void(0)" data-id="l1p1" class="menuitem">Introduction</a>
+                                    </li>
+                                    <li role="menuitem" aria-hidden="true" style="display: none;">
+                                        <a href="javascript:void(0)" data-id="l1p2" class="menuitem">Level 1: Your Production Possibility</a>
+                                    </li>
+                                    <li role="menuitem"  aria-hidden="true" style="display: none;">
+                                        <a href="javascript:void(0)" data-id="l2p1" class="menuitem">Level 2: Opportunity Cost,<br>Comparative Advantage, and <br>Specialization</a>
+                                    </li>
+                                    <li role="menuitem"  aria-hidden="true" style="display: none;">
+                                        <a href="javascript:void(0)" data-id="l3p1" class="menuitem">Level 3: Implementing Trade and<br>Exploring the Gains from Trade</a>
+                                    </li>
+                                    <li role="menuitem"  aria-hidden="true" style="display: none;">
+                                        <a href="javascript:void(0)" data-id="l4p1" class="menuitem" >Level 4: Gains from Trade with<br>Absolute Advantage</a>
+                                    </li>
+                                    <li role="menuitem"  aria-hidden="true" style="display: none;">
+                                        <a href="javascript:void(0)" data-id="summary" class="menuitem">Summary</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="header-progress">
+                        <div class="progress" id="progress">
+                            <div class="background" id ="progress_bar" aria-label="Level 1 progress 0%, Level 2 progress 0%, Level 3 progress 0%, Level 4 progress 0%">
+                               <!-- <div class="section pgBgItem" data-level="0" aria-hidden="true">
+                                    <div class="filler " aria-hidden="true">
+                                        <div class="pgBgItemFill" style="width:0%;" progress="0" aria-hidden="true"></div>
+                                    </div>
+                                </div>-->
+                                <div class="section pgBgItem" data-level="1" aria-hidden="true">
+                                    <div class="filler " level="1" aria-hidden="true">
+                                        <div class="pgBgItemFill" style="width:0%;" progress="0" aria-hidden="true"></div>
+                                    </div>
+                                </div>
+                                <div class="section pgBgItem" data-level="2" aria-hidden="true">
+                                    <div class="filler " level="2" aria-hidden="true">
+                                        <div class="pgBgItemFill" style="width:0%;" progress="0" aria-hidden="true"></div>
+                                    </div>
+                                </div>
+                                <div class="section pgBgItem" data-level="3" aria-hidden="true">
+                                    <div class="filler " level="3" aria-hidden="true">
+                                        <div class="pgBgItemFill" style="width:0%;" progress="0" aria-hidden="true"></div>
+                                    </div>
+                                </div>
+                                <div class="section pgBgItem" data-level="4" aria-hidden="true">
+                                    <div class="filler " level="4" aria-hidden="true">
+                                        <div class="pgBgItemFill" style="width:0%;" progress="0" aria-hidden="true"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scale" aria-hidden="true">
+                                <div class="section " aria-hidden="true">
+                                    <div class="filler" aria-hidden="true">L1</div>
+                                </div>
+                                <div class="section " aria-hidden="true">
+                                    <div class="filler" aria-hidden="true">L2</div>
+                                </div>
+                                <div class="section " aria-hidden="true">
+                                    <div class="filler" aria-hidden="true">L3</div>
+                                </div>
+                                <div class="section " aria-hidden="true">
+                                    <div class="filler" aria-hidden="true">L4</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="scorediv" class="scoreDiv wrapper">Overall Score: 0%</div>
+                    </div>
+                    
+                    <div id="header-btn-container">
+                        <div class="wrapper">
+                            <div class="inventory_btn">
+                            <button class="linksurplus-p" id="linksurplus" aria-current="false" aria-expanded="false">
+                                <span>Inventory</span>
+                                <img src="assets/images/down-chevron.png" aria-hidden="false" alt="">
+                            </button>
+                        </div>
+                        <div class="ppf_btn">
+                            <button class="linkppf-p" id="linkppf" aria-current="false" aria-expanded="false">
+                                <span>PPF</span>
+                                <img src="assets/images/down-chevron.png" aria-hidden="false" alt="">
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </header>
+        <main role="main">
+            <div class="top-slider innerWrapper headmargin"></div>
+            <div class="main-content innerWrapper"></div>
+        </main>
+        <footer>
+            <center>
+                <nav role="navigation">
+                    <div id="footer-navigation">
+                        <div class="previous">
+                            <a id="linkprevious" href="#">
+                                <img class="prevImg" src="assets/images/back-button-v2.png" aria-hidden="true" alt="">
+                                <span>Previous</span>
+                            </a>
+                        </div>
+                        <div class="next">
+                            <a id="linknext" href="#">
+                                <span>Next</span>
+                                <img class="nextImg" src="assets/images/next-button-v2.png" aria-hidden="true" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </center>
+        </footer>
+    </div>
+    <a id="hiddenAnchor" href="#thirddiv" style="display:none;">hidden anchor</a>
+</body>
+</html>

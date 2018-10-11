@@ -1,0 +1,598 @@
+﻿
+@media screen and (max-width : 1024px) {
+    .wrapper{
+        margin: 0 2%;
+    }   
+}
+
+@media  screen and (max-width:940px){
+    #wrapper{
+        border: 0px;
+    }   
+    #surpluscharttable_c{       
+        width: 40%;    
+    } 
+    .inputwood{
+        margin-left: 13%;
+    }
+}
+@media  screen and (max-width: 912px) {  
+    .intro-content .intro-p {
+        width: 47%;
+    }
+
+    .inputwood{
+        margin-left: 16%;
+    }
+}
+@media  screen and (max-width: 893px) {  
+    .intro-content .intro-p {
+        width: 45%;
+    }
+    .intro-content .intro-p {
+        width: 44%;
+    }  
+    .inputwood{
+        margin-left: 24%;
+    }
+
+    .rTableCell2{
+        padding-right: 0px;
+    }
+}
+@media  screen and (max-width: 880px) {  
+    #surpluscharttable_c{       
+        width: auto;    
+    } 
+    #surpluschart_c{
+        width:98%;
+     }
+     .inputwood{
+        margin-left: 25%;
+    }
+    .rTableCell2{
+        padding-right: 0px;
+    }
+
+    .rTableCell5{
+        padding-right: 15px;
+    }
+    .actionbtndiv {
+        margin-top: 5px;
+    }
+}
+@media  screen and (max-width: 840px) {  
+    .intro-content .intro-p {
+        width: 40%;
+    }
+    #surpluschart_c{
+        width:95%;
+     }
+
+     .inputwood{
+        margin-left:42%;
+    }
+
+    .inputfish{
+        margin-left: 0%;
+        margin-top: -5px;
+    }
+
+    .rTableCell4{
+        margin-left: 30%;
+        margin-top: 15px;
+        min-width: 45%;
+    }
+
+    .rTableCell5{
+        padding-right: 10px;
+    }
+}
+@media  screen and (max-width : 768px) {
+    #txtquest, #txtimg{
+        padding-top: 20px;
+    }
+
+    body{
+        box-sizing: border-box;
+      }
+      #wrapper{
+         max-width: 940px;
+      }
+      .wrapper{
+          margin: 0% 2%;
+      }
+      .intro-content .intro-p{
+        width: 100%; 
+        margin-bottom: 10px;
+      }
+      .wrapperanimation{width: 100%;}
+      h2.pageheading,.main-content .intro-content{
+        margin: 0% 2%;
+    }
+    
+    #collect-fish, #collect-wood {
+        width: 75%;
+        margin: 20px auto;
+    }
+    .selecttimeslider .fish,.selecttimeslider .wood,.selecttimeslider .graph{
+        margin-left: 13%;
+    }
+    #graph-div {
+        width: 75%;
+        margin-top: 10px;
+        margin-left: 13%;   
+    }
+    #graph-range .h_left{
+        margin-left: 13%;
+    }
+    #graph-range .h_right{
+        margin-right: 11%;
+        right:11%;
+    }
+    .runtimeslider div{
+        width: 75%;
+        margin: 0 auto;
+    }
+    .runtimeslider .ds-heading,.nighttimeslider .ds-heading{
+         margin-left:3%;
+    }
+    .nighttimeslider div {
+         width: 75%;
+        margin: 0 auto;
+    }
+    .nighttimeslider {
+        margin-bottom: 100px;
+    }
+    .runtimeslider #animate-slider-range > .h_left,.nighttimeslider #animate-slider-range > .h_left {
+        right: 50px;
+    }
+    .runtimeslider #animate-slider-range > .h_right,.nighttimeslider #animate-slider-range > .h_right{
+        left: 50px;
+    }
+    .selecttimeslider #graph-range .h_right {
+        right: 8px;
+    }
+    .t_animation_c {
+         margin: 0 auto;
+    }
+    .wrapperanimation,.animcontainer{
+         width: 100%;         
+    }
+    #ppfchart_c{
+        width: 90%;
+    }
+.addpointbtn,#addpointbtn{
+        margin-top:3px;
+        margin-left:24px
+    }
+    
+.checkanswerbtndiv{
+    margin-top: 5px;
+
+}
+    .spanfish,.spanwood {
+        margin: 0px 5px;
+    }
+    .tradepanel{
+       width:100%
+    }
+    #studenttradeGraph #highcharts-16,#fridaytradeGraph #highcharts-18{
+        margin:0 auto;
+    }
+    
+    .slider-wrapper .friday-wrapper, .slider-wrapper .stud-wrapper{
+        width:75%;
+        margin:0 auto;
+    }
+
+    .pointdiv{
+        width: 100%!important;
+    }
+
+    .actionbtndiv{
+        width: 100%!important;
+    }
+
+    .inputfish{
+        margin-top: 0px;
+        margin-left: 1%;
+    }
+
+    .inputwood{
+        margin-top: 0px;
+        margin-left: 0%;
+    }
+
+    .rTableCell5{
+        padding-right: 8px;
+    }
+    #woodlogdiv{
+        margin-right: 10px;
+    }
+}
+@media  screen and (max-width : 543px) {
+    .rTableCell1{
+        width: 100%;
+    }
+    
+    .spanwood, .spanfish{
+        width: 100%!important;
+    }
+    .pointdiv{
+        width: 100%;
+    }
+
+    .actionbtndiv{
+        width: 100%;
+    }
+
+    .inputfish{
+        margin-top: 0px;
+        margin-left: 0%;
+        padding-top: 1%;
+    }
+
+    .rTableCell4{
+            margin-left: 0%;
+            width: 100%;
+    }
+
+    .rTableCell2{
+        padding-right: 6px;
+    }
+}
+@media  screen and (max-width : 400px) {
+    .rTableCell2{
+        width: 5%;
+        margin-top: 27px;
+        padding-right: 0px!important;
+    }
+    .rTableCell3{
+        width: 80%;
+    }
+    .rTableCell1{
+        padding-bottom:10px;
+    }
+
+    .pointdiv{
+        width: 100%;
+    }
+
+    .actionbtndiv{
+        width: 100%;
+    }
+
+    .spanwood, .spanfish{
+        width: 100%!important;
+    }
+}
+@media  screen and (max-width : 500px) {
+    #header-progress .progress {
+        float:left;
+   }
+   #header-progress .scoreDiv{
+    margin-right: 15px;
+   }
+   #header-progress .background {
+    width: 76%;
+   }
+   #header-progress .scale {
+     width: 75%;
+   }
+
+   .pointdiv{
+    width: 100%;
+}
+
+.actionbtndiv{
+    width: 100%;
+}
+
+.spanwood, .spanfish{
+    width: 100%!important;
+}
+
+.addpointbtn,#addpointbtn{
+    margin-top:5px;
+    margin-left:10px
+}
+
+.checkanswerbtndiv{
+margin-top: 10px;
+
+}
+
+.rTableCell2{
+    padding-right: 9px;
+}
+}
+
+@media  screen and (max-width : 460px) {
+    #img-stranded-island{
+        width:418px!important;
+      }
+   table.noborder tr th, table.noborder tr td{
+	  min-width: 0px;
+      }
+
+      .pointdiv{
+        width: 100%;
+    }
+
+    .actionbtndiv{
+        width: 100%;
+    }
+
+    .spanwood, .spanfish{
+        width: 100%!important;
+    }
+
+    .addpointbtn,#addpointbtn{
+        margin-top:6px;
+        margin-left:24px
+    }
+    
+    .checkanswerbtndiv{
+    margin-top: 13px;
+
+    }
+
+    #woodlogdiv{
+        margin-right: 80px;
+    }
+
+    #fishcalsdiv{
+        padding:2px 0 0 20px;
+    }
+      
+}
+@media screen and (max-width: 445px){
+    
+    
+    #woodlogdiv{
+        margin-right: 65px;
+    }
+    
+    #fishcalsdiv{
+        padding-left: 20px;
+        padding-top: 2px;
+    }
+
+    #img-stranded-island {
+          width: 415px!important;
+    }
+
+    .pointdiv{
+        width: 100%;
+    }
+
+    .actionbtndiv{
+        width: 100%;
+    }
+
+    .addpointbtn,#addpointbtn{
+        margin-top:6px;
+        margin-left:24px
+    }
+    
+    .checkanswerbtndiv{
+    margin-top: 13px;
+
+    }
+
+    .spanwood{
+        width: 100%!important;
+    }
+
+    .spanfish{
+        width: 100%!important;
+    }
+      
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media  screen and (max-width : 440px) {
+    body{
+      box-sizing: border-box;
+    }
+    #wrapper{
+       max-width: 940px;
+    }
+    .wrapper{
+        margin: 0% 2%;
+    }
+    h2.pageheading,.main-content .intro-content{
+        margin: 0% 2%;
+    }
+    /* progress-bar */
+    #header-progress .progress {
+         float:left;
+    }
+    #header-progress .scoreDiv{
+        margin-right: 15px;
+    }
+     /* progress-bar */
+    .main-content .intro-content{
+        width: 95%;
+    }    
+    #header-btn-container,.intro-content .intro-p {
+        width: 100%;
+    }
+    
+     #img-stranded-island{
+      width:100%!important;
+    }
+    .wrapperanimation {
+        display: flex;
+        float: left;
+        width: 100%;
+    }
+    
+    .checkAnswer{
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+    .spanfish,.spanwood {
+        margin: 0px 5px;
+    }
+    .questionband input[type="text"], .questionband input[type="text"] {
+        width: 82px;
+    } 
+    #collect-fish, #collect-wood {
+        width: 95%;
+        margin: 15px auto;
+    }
+    .selecttimeslider .fish, .selecttimeslider .wood,.selecttimeslider .graph{
+        margin-left: 3%;
+    }
+    #graph-div {
+        width: 95%;
+        margin-top: 15px;
+        margin-left: 3%;
+    }
+    #graph-range .h_left {
+        margin-left: 3%;
+    }
+    #graph-range .h_right {
+        margin-right: 3%;
+    }
+    .runtimeslider div {
+        width: 100%;
+    }
+    
+    .runtimeslider .ds-heading, .nighttimeslider .ds-heading {
+        margin-left: 0%;
+    }
+    .nighttimeslider div {
+        width: 100%;
+    }
+    .runtimeslider #animate-slider-range > .h_left, .nighttimeslider #animate-slider-range > .h_left {
+         right: 0px; 
+    }
+    .runtimeslider #animate-slider-range > .h_right, .nighttimeslider #animate-slider-range > .h_right {
+         left: 0px; 
+    }
+    .selecttimeslider #graph-range .h_right {
+        right: 0px;
+    }
+    .tradepanel{
+        width:100%
+     }
+     #studenttradeGraph #highcharts-16,#fridaytradeGraph #highcharts-18{
+        margin:0 auto;
+    }
+    .slider-wrapper .friday-wrapper, .slider-wrapper .stud-wrapper{
+        width: 96%;
+        margin: 0 auto;
+    }
+    .rTableCell2{
+        margin-top: 28px;
+        position: relative;
+      }
+    .rTableCell4{
+        margin-left:0px;
+        widows: 100;
+        }
+
+    #questionchart{
+        width: 100%;
+        float: left;
+    }
+
+    .rTableCell2{
+        padding-right: 10px;
+    }
+}
+@media  screen and (max-width : 420px) {
+    table.noborder tr th, table.noborder tr td{
+        padding: 0px;
+    }
+    /* Iphone animation css */
+    /* Lady Come With Fish */
+    .friday-raftSprites{
+        left: 31px;
+        top: 206px;
+        animation: raft 2.5s steps(22);
+    }
+    @keyframes raft {
+        0% {top:245px; left: -31px;}
+        100% { top:206px; left: 31px; }
+      }
+    .fridaySprites{
+        left: 25px;
+        top: 153px;
+        animation: lady 2.5s steps(11);
+    }
+    @keyframes lady {
+        0% { top: 195px; left: -25px; background-position: -0px } 
+        50% { top: 168px; left: 5px; background-position: 0px }  
+        100% {top: 153px; left: 25px;  background-position: -794px }
+    }
+
+
+    /* Lady come with fish */
+    .fishBarrelRaft2{
+        left: 90px;
+        top: 208px;
+    }
+    @keyframes fbarrel2 {
+        0% {top:242px; left: 38px;}
+        100% { top:208px; left: 90px; }
+    }
+
+    /* Lady Go With Wood */
+    .fridaySprites2 {
+        left: -74px;
+        top: 292px;
+        animation: lady2 2.5s steps(11);
+    }
+    
+    @keyframes lady2 {
+        0% {
+            top: 160px;
+            left: 30px;
+            background-position: -794px;
+        }
+        50% {
+            top: 184.5px;
+            left: -15px;
+            background-position: 0px
+        }
+        100% {
+            top: 272px;
+            left: -80px;
+            background-position: -0px;
+        }
+    }
+    
+    .friday-raftSprites2 {
+        left: -60px;
+        top: 270px;
+        animation: raft2 2.5s steps(22);
+    }
+    @keyframes raft2 {
+        0% {
+            top: 208px;
+            left: 31px;
+        }
+        100% {
+            top: 291px;
+            left: -72px;
+        }
+    }
+    
+    /*going stick barrel*/
+.stickBarrelRaft2 {
+    left: -11px;
+    top: 280px;
+    animation: sbarrel2 2.5s steps(22);
+}
+    @keyframes sbarrel2 {
+        0% { top:218px; left: 85px;}
+        100% { top:280px; left: -11px; }
+    }
+    h1 {font-size: 22px;}
+}
+
+ 
