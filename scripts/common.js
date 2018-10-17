@@ -52,6 +52,29 @@ var UserRoles = {
 }
 
 var _Common = (function () {
+    var germanFormat = function (number) {
+        number = Number(number);
+        var postComma, preComma, stringReverse, ref;
+        stringReverse = function (str) {
+            return str.split('').reverse().join('');
+        };
+        ref = number.toFixed(5).split('.'), preComma = ref[0], postComma = ref[1];
+        postComma = stringReverse(Number(stringReverse(postComma))+'')
+        preComma = stringReverse(stringReverse(preComma).match(/.{1,3}/g).join('.'));
+        if (preComma.indexOf('-') == 0 && preComma.indexOf('.') == 1)
+            preComma = preComma.slice(0, 1) + preComma.slice(2);
+            if(Number(postComma) == 0) {
+                return "" + preComma;
+              } else {
+                return "" + preComma + "," + postComma; 
+              }
+    };
+
+     var englishFormat = function (number) {
+        number = number.replace(/\./g, "");
+        number = number.replace(",", ".");
+        return number;
+    }
     return{
         GetParameterByName: function(name){
             name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -119,6 +142,18 @@ var _Common = (function () {
             }
             return true;
          }*/
+        
+       
+        
+            
+                En2Gr: function (number) {
+                    debugger;
+                    return germanFormat(number);
+                },
+                Gr2En: function (number) {
+                    return englishFormat(number);
+                }
+            
     }
 })();
 

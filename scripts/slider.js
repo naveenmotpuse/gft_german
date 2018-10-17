@@ -278,8 +278,8 @@ var _Slider = (function () {
                 _TradeSlider.UpdateTradeSettings();
             }
             var calIdleHours = 12 - (val1+val2); 
-            var txt = "Collect Wood " + val1 + " Hour Collect Fish " + val2 + " Hour " + "Daytime Schedule Collect Wood " + val1 + " Hour Collect Fish " + val2 + " Hour" + " Idle " + calIdleHours + " Hour";
-            var txt1 = "Daytime Schedule Collect Wood " + val1 + " Hour Collect Fish " + val2 + " Hour" + " Idle " + calIdleHours + " Hour";
+            var txt = "Collect Wood " + val1 + " Hour Collect Fish " + val2 + " Std " + "Daytime Schedule Collect Wood " + val1 + " Hour Collect Fish " + val2 + " Std" + " Idle " + calIdleHours + " Std";
+            var txt1 = "Daytime Schedule Collect Wood " + val1 + " Hour Collect Fish " + val2 + " Std" + " Idle " + calIdleHours + " Std";
             $("#graph-div").attr("aria-label", txt1);
             $(".assistive-text").text('');
             $(".assistive-text").text(txt);
@@ -338,7 +338,7 @@ var _Slider = (function () {
             DataStorage.ResetDataMap1();
 
             _Slider.submitValidate();
-            $(".selecttimeslider .h_right").html(AnimConfig.dayTime + " hour");
+            $(".selecttimeslider .h_right").html(AnimConfig.dayTime + " Std");
         },
         setSlidervalue: function (wood, fish) {
             $("#collect-wood .wood-slider").val(wood);

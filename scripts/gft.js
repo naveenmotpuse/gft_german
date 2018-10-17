@@ -347,7 +347,7 @@ var _CustomQuestion = (function () {
 
             }
             if (qObj.Id == "Q19") {
-                $("#woodPerHr").html(_Scenario.GetCurrentScenario().woodPerHr);
+                $("#woodPerHr").html(_Common.En2Gr(_Scenario.GetCurrentScenario().woodPerHr));
                 $("#fishPerHr").html(_Scenario.GetCurrentScenario().fishPerHr);
                 $("#woodPerDay").html(_Scenario.GetCurrentScenario().woodPerDay);
                 $("#fishPerDay").html(_Scenario.GetCurrentScenario().fishPerDay);
@@ -363,7 +363,7 @@ var _CustomQuestion = (function () {
             var scenario = _Scenario.GetCurrentScenario().ppfData;
             var tbody = "";
             for (var i = 0; i < TimePPFTable.length; i++) {
-                tbody = tbody + '<tr><td>' + TimePPFTable[i][0] + '</td><td>' + TimePPFTable[i][1] + '</td><td>' + scenario[i][0] + '</td><td>' + scenario[i][1] + '</td></tr>'
+                tbody = tbody + '<tr><td>' + TimePPFTable[i][0] + '</td><td>' + TimePPFTable[i][1] + '</td><td>' + _Common.En2Gr(scenario[i][0]) + '</td><td>' + scenario[i][1] + '</td></tr>'
             }
             return tbody;
         },

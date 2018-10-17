@@ -580,7 +580,7 @@ table caption {
 .rTableHead {
     float: left;
     overflow: hidden;
-    padding: 0px 0.5%;
+    padding: -1px 0.5%;
 }
 
 .rTable:after {
@@ -593,7 +593,7 @@ table caption {
 }
 .rTableRow{padding-top:10px}
 .retrytext{
-    width:130px;
+    width:232px;
     float: left;
 }
 

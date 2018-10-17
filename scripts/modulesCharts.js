@@ -10,7 +10,7 @@ var _ModuleCharts = (function () {
                 },
                 tooltip: {
                     formatter: function () {
-                        return this.x + ' logs (' + TimePPFTable[this.point.index][0] + ' hours), ' + this.y + ' cals (' + TimePPFTable[this.point.index][1]+ ' hours)';
+                        return this.x + ' Scheite (' + TimePPFTable[this.point.index][0] + ' Stunden), ' + this.y + ' Cal. (' + TimePPFTable[this.point.index][1]+ ' Stunden)';
                     },
                     positioner: function (labelWidth, labelHeight, point) {
                         var tooltipX, tooltipY;
@@ -30,7 +30,7 @@ var _ModuleCharts = (function () {
                 },              
                 xAxis: {
                     title: {
-                        text: 'Firewood (logs)'
+                        text: 'Feuerholz (Scheite)'
                     },
                     min: 0,
                     max: 120,
@@ -44,7 +44,7 @@ var _ModuleCharts = (function () {
                 },
                 yAxis: {
                     title: {
-                        text: 'Fish (cals)'
+                        text: 'Fisch (Cal.)'
                     },
                     labels: {
                         format: '{value}'
@@ -111,7 +111,7 @@ var _ModuleCharts = (function () {
                 },
                 tooltip: {
                     formatter: function () {
-                        return this.x + ' logs (' + TimePPFTable[this.point.index][0] + ' hours), ' + this.y + ' cals (' + TimePPFTable[this.point.index][1]+ ' hours)';
+                        return this.x + ' Scheite (' + TimePPFTable[this.point.index][0] + ' Stunden), ' + this.y + ' Cal. (' + TimePPFTable[this.point.index][1]+ ' Stunden)';
                     },
                     snap:0
                 },
@@ -122,7 +122,7 @@ var _ModuleCharts = (function () {
                 },
                 xAxis: {
                     title: {
-                        text: 'Firewood (logs)'
+                        text: 'Feuerholz (Scheite)'
                     },
                     min: 0,
                     max: 120,
@@ -136,7 +136,7 @@ var _ModuleCharts = (function () {
                 },
                 yAxis: {
                     title: {
-                        text: 'Fish (cals)'
+                        text: 'Fisch (Cal.)'
                     },
                     labels: {
                         format: '{value}'
@@ -159,7 +159,7 @@ var _ModuleCharts = (function () {
                 },
                 series: [{
                         id: 'userppfser',
-                        name: 'Your PPF',
+                        name: 'Ihre PMK',
                         type: 'spline',
                         lineWidth: 1,
                         data: userPPF,
@@ -177,7 +177,7 @@ var _ModuleCharts = (function () {
                     },
                     {
                         id: 'fridayppfser',
-                        name: "Friday's PPF",
+                        name: "Freitags .PMK",
                         type: 'spline',
                         lineWidth: 1,
                         data: fridayPPF,
@@ -195,7 +195,7 @@ var _ModuleCharts = (function () {
                     },
                     {
                         id: 'bothppfppoint',
-                        name: "Both Student and Friday's Production Point",
+                        name: "Produktionspunkt Student und Produktionspunkt Freitag",
                         type: 'spline',
                         lineWidth: 0,
                         data: [
@@ -227,7 +227,7 @@ var _ModuleCharts = (function () {
                 },
                 tooltip: {
                     formatter: function () {
-                        return this.x + ' logs (' + TimePPFTable[this.point.index][0] + ' hours), ' + this.y + ' cals (' + TimePPFTable[this.point.index][1]+ ' hours)';
+                        return this.x + ' Scheite (' + TimePPFTable[this.point.index][0] + ' Stunden), ' + this.y + ' Cal. (' + TimePPFTable[this.point.index][1]+ ' Stunden)';
                     },
                     snap:0
                 },
@@ -238,7 +238,7 @@ var _ModuleCharts = (function () {
                 },
                 xAxis: {
                     title: {
-                        text: 'Firewood (logs)'
+                        text: 'Feuerholz (Scheite)'
                     },
                     min: 0,
                     max: 120,
@@ -252,7 +252,7 @@ var _ModuleCharts = (function () {
                 },
                 yAxis: {
                     title: {
-                        text: 'Fish (cals)'
+                        text: 'Fisch (Cal.)'
                     },
                     labels: {
                         format: '{value}'
@@ -275,7 +275,7 @@ var _ModuleCharts = (function () {
                 },
                 series: [{
                         id: 'userppfser',
-                        name: 'Your PPF',
+                        name: 'Ihre PMK',
                         type: 'spline',
                         lineWidth: 1,
                         data: _Scenario.GetUserData(),
@@ -293,7 +293,7 @@ var _ModuleCharts = (function () {
                     },
                     {
                         id: 'fridayppfser',
-                        name: "Friday's PPF",
+                        name: "Freitags .PMK",
                         type: 'spline',
                         lineWidth: 1,
                         data: _Scenario.GetFridayData(),
@@ -344,7 +344,7 @@ var _ModuleCharts = (function () {
                     /*categories: [1,2,3],*/
                     crosshair: true,
                     title: {
-                        text: 'Day',
+                        text: 'Tag',
                         style: {
                             color: ColorCodes.black
                         }
@@ -366,7 +366,7 @@ var _ModuleCharts = (function () {
                         }
                     },
                     title: {
-                        text: 'Wood (logs)',
+                        text: 'Holz (Scheite)',
                         style: {
                             color: ColorCodes.wood
                         }
@@ -380,7 +380,7 @@ var _ModuleCharts = (function () {
                     gridLineWidth: 1,
                     tickInterval: 1000,
                     title: {
-                        text: 'Fish (cals)',
+                        text: 'Fisch (Cal.)',
                         style: {
                             color: ColorCodes.fish
                         }
@@ -394,16 +394,16 @@ var _ModuleCharts = (function () {
                 }],
                 tooltip: {
                     formatter: function () {
-                        var s = '<span><strong>Day ' + this.x + '</strong></span><br/>';
+                        var s = '<span><strong>Tag ' + this.x + '</strong></span><br/>';
                         for (var i = 0; i < this.points.length; i++) {
                             var myPoint = this.points[i];
                             if (myPoint.series.name != "Goal") {
                                 s += '<br/><span style="color:' + myPoint.series.color + '">\u25CF</span>' + myPoint.series.name + ': ';
 
                                 if (myPoint.series.name == "Fish") {
-                                    s += myPoint.y + ' (cals)';
+                                    s += myPoint.y + ' (Cal.)';
                                 } else {
-                                    s += myPoint.y + ' (logs)';
+                                    s += myPoint.y + ' (Scheite)';
                                 }
                             }
                         }
@@ -413,7 +413,7 @@ var _ModuleCharts = (function () {
                 },
                 series: [{
                     id: 'Goal',
-                    name: 'Goal',
+                    name: 'Ziel',
                     type: 'spline',
                     color: ColorCodes.blue,
                     lineWidth: 2,
@@ -425,7 +425,7 @@ var _ModuleCharts = (function () {
                     data: [90, 90, 90, 90, 90]
                 }, {
                     id: 'Fish',
-                    name: 'Fish',
+                    name: 'Fisch',
                     type: 'spline',
                     lineWidth: 2,
                     yAxis: 1,
@@ -438,7 +438,7 @@ var _ModuleCharts = (function () {
                     data: []
                 }, {
                     id: 'Wood',
-                    name: "Wood",
+                    name: "Holz",
                     type: 'spline',
                     lineWidth: 2,
                     color: ColorCodes.friday,
@@ -471,7 +471,7 @@ var _ModuleCharts = (function () {
                 },
                 tooltip: {                    
                     formatter: function () {
-                        return this.x + ' logs (' + TimePPFTable[this.point.index][0] + ' hours), ' + this.y + ' cals (' + TimePPFTable[this.point.index][1]+ ' hours)';
+                        return this.x + ' Scheite (' + TimePPFTable[this.point.index][0] + ' Stunden), ' + this.y + ' Cal. (' + TimePPFTable[this.point.index][1]+ ' Stunden)';
                     },
                     snap:0
                 },
@@ -482,7 +482,7 @@ var _ModuleCharts = (function () {
                 },
                 xAxis: {
                     title: {
-                        text: 'Firewood (logs)'
+                        text: 'Freitags .PMK'
                     },
                     min: 0,
                     max: 120,
@@ -496,7 +496,7 @@ var _ModuleCharts = (function () {
                 },
                 yAxis: {
                     title: {
-                        text: 'Fish (cals)'
+                        text: 'Fisch (Cal.)'
                     },
                     labels: {
                         format: '{value}'
@@ -519,7 +519,7 @@ var _ModuleCharts = (function () {
                 },
                 series: [{
                         id: 'userppfser',
-                        name: 'Your PPF',
+                        name: 'Ihre PMK',
                         type: 'spline',
                         lineWidth: 0,
                         data: [],
@@ -537,7 +537,7 @@ var _ModuleCharts = (function () {
                     },
                     {
                         id: 'fridayppfser',
-                        name: "Friday's PPF",
+                        name: "Freitags .PMK",
                         type: 'spline',
                         lineWidth: 0,
                         data: [],
@@ -584,7 +584,7 @@ var _ModuleCharts = (function () {
                 },
                 tooltip: {
                     formatter: function () {
-                        return this.x + ' logs (' + TimePPFTable[this.point.index][0] + ' hours), ' + this.y + ' cals (' + TimePPFTable[this.point.index][1]+ ' hours)';
+                        return this.x + ' Scheite (' + TimePPFTable[this.point.index][0] + ' Stunden), ' + this.y + ' Cal. (' + TimePPFTable[this.point.index][1]+ ' Stunden)';
                     },
                     snap:0
                 },
@@ -595,7 +595,7 @@ var _ModuleCharts = (function () {
                 },
                 xAxis: {
                     title: {
-                        text: 'Firewood (logs)'
+                        text: 'Feuerholz (Scheite)'
                     },
                     min: 0,
                     max: 120,
@@ -609,7 +609,7 @@ var _ModuleCharts = (function () {
                 },
                 yAxis: {
                     title: {
-                        text: 'Fish (cals)'
+                        text: 'Fisch (Cal.)'
                     },
                     labels: {
                         format: '{value}'
@@ -633,7 +633,7 @@ var _ModuleCharts = (function () {
                 },
                 series: [{
                     id: 'userppfser',
-                    name: 'Your PPF',
+                    name: 'Ihre PMK',
                     type: 'spline',
                     lineWidth: 1,
                     data: localUserPPF,
@@ -651,7 +651,7 @@ var _ModuleCharts = (function () {
                 },
                 tooltip: {
                     formatter: function () {
-                        return this.x + ' logs (' + TimePPFTable[this.point.index][0] + ' hours), ' + this.y + ' cals (' + TimePPFTable[this.point.index][1]+ ' hours)';
+                        return this.x + ' Scheite (' + TimePPFTable[this.point.index][0] + ' Stunden), ' + this.y + ' Cal. (' + TimePPFTable[this.point.index][1]+ ' Stunden)';
                     },
                     snap:0
                 },
@@ -662,7 +662,7 @@ var _ModuleCharts = (function () {
                 },
                 xAxis: {
                     title: {
-                        text: 'Firewood (logs)'
+                        text: 'Feuerholz (Scheite)'
                     },
                     min: 0,
                     max: 120,
@@ -676,7 +676,7 @@ var _ModuleCharts = (function () {
                 },
                 yAxis: {
                     title: {
-                        text: 'Fish (cals)'
+                        text: 'Fisch (Cal.)'
                     },
                     labels: {
                         format: '{value}'
@@ -700,7 +700,7 @@ var _ModuleCharts = (function () {
                 },
                 series: [{
                     id: 'fridayppfser',
-                    name: "Friday's PPF",
+                    name: "Freitags .PMK",
                     type: 'spline',
                     lineWidth: 1,
                     data: localfridayPPF,
