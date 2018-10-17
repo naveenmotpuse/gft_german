@@ -441,9 +441,9 @@ var Module = (function () {
             var isWorsen = AttDett.IsWorsen === true ? true : false;
             if (isWorsen == true) {
                 if (popupCntrl == undefined) {
-                    $(".row.pgfeedback .col1 .k-element-text").append($('<p class="popupNote"><span><i>Note: Even though you missed this question, because you got a better score in a previous attempt, the score from that attempt will count towards the final grade.</i></span></p></br>'));
+                    $(".row.pgfeedback .col1 .k-element-text").append($('<p class="popupNote"><span><i>Hinweis: Obwohl Sie diese Frage verpasst haben, weil Sie bei einem früheren Versuch ein besseres Ergebnis erzielt haben, wird der Punktestand aus diesem Versuch auf die Gesamtnote angerechnet.</i></span></p></br>'));
                 } else {
-                    popupCntrl.append($('<p class="popupNote"><span><i>Note: Even though you missed this question, because you got a better score in a previous attempt, the score from that attempt will count towards the final grade.</i></span></p></br>'));
+                    popupCntrl.append($('<p class="popupNote"><span><i>Hinweis: Obwohl Sie diese Frage verpasst haben, weil Sie bei einem früheren Versuch ein besseres Ergebnis erzielt haben, wird der Punktestand aus diesem Versuch auf die Gesamtnote angerechnet.</i></span></p></br>'));
                 }
             }
             g_userScore.AddScoreToLevel(AttDett.LevelNo, AttDett.MaxScore);

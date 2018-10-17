@@ -174,7 +174,7 @@
                 _Question.DisplayRemainingDataInFeedback()
                 //_Question.DisplayRemDataOnPrev()
                 if(isWorse) {
-                    $("#div_feedback p:last").prepend($('<p class="popupNote"><span><i>Note: Even though you missed this question, because you got a better score in a previous attempt, the score from that attempt will count towards the final grade.</i></span></p></br>'));
+                    $("#div_feedback p:last").prepend($('<p class="popupNote"><span><i>Hinweis: Obwohl Sie diese Frage verpasst haben, weil Sie bei einem früheren Versuch ein besseres Ergebnis erzielt haben, wird der Punktestand aus diesem Versuch auf die Gesamtnote angerechnet.</i></span></p></br>'));
                 }
                 $("body").animate({
                     scrollTop: $(document).height()
@@ -187,8 +187,8 @@
             if(activityDataArr.length>0){         
                 if(activityDataArr[activityDataArr.length-1]!=undefined && activityDataArr[activityDataArr.length-1].tradeData!=undefined){
                     var remDatatmp = activityDataArr[activityDataArr.length-1].tradeData.TR.remData;
-                    var userRemainData = remDatatmp.wood + " logs of wood and " + remDatatmp.fish + " cals of fish ";
-                    var fridayRemainData = remDatatmp.fridaywood + " logs of wood and " + remDatatmp.fridayfish + " cals of fish ";
+                    var userRemainData = remDatatmp.wood + " Holzscheite und " + remDatatmp.fish + " Kalorien in Form von Fisch oder ";
+                    var fridayRemainData = remDatatmp.fridaywood + " Holzscheite und " + remDatatmp.fridayfish + " Kalorien in Form von Fisch oder ";
                     $("#usertarget").text(userRemainData);
                     $("#fridaytarget").text(fridayRemainData);
                 }

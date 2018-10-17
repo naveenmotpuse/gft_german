@@ -397,7 +397,7 @@ var _ModuleCharts = (function () {
                         var s = '<span><strong>Tag ' + this.x + '</strong></span><br/>';
                         for (var i = 0; i < this.points.length; i++) {
                             var myPoint = this.points[i];
-                            if (myPoint.series.name != "Goal") {
+                            if (myPoint.series.name != "Ziel") {
                                 s += '<br/><span style="color:' + myPoint.series.color + '">\u25CF</span>' + myPoint.series.name + ': ';
 
                                 if (myPoint.series.name == "Fish") {
@@ -412,7 +412,7 @@ var _ModuleCharts = (function () {
                     shared: true
                 },
                 series: [{
-                    id: 'Goal',
+                    id: 'Ziel',
                     name: 'Ziel',
                     type: 'spline',
                     color: ColorCodes.blue,
@@ -482,7 +482,7 @@ var _ModuleCharts = (function () {
                 },
                 xAxis: {
                     title: {
-                        text: 'Freitags .PMK'
+                        text: 'Feuerholz (Scheite)'
                     },
                     min: 0,
                     max: 120,
