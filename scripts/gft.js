@@ -354,8 +354,8 @@ var _CustomQuestion = (function () {
                 $("#q19TableBody").html(this.UpdateScenarioTable());
             }
             if (qObj.Id == "Q21") {
-                $("#youcalories").html(qObj.calories[0]);
-                $("#fridaycalories").html(qObj.calories[1]);
+                $("#youcalories").html(_Common.En2Gr(qObj.calories[0]));
+                $("#fridaycalories").html(_Common.En2Gr(qObj.calories[1]));
             }      
             _CustomPage.SetPageAccesibility();      
         },
@@ -701,6 +701,10 @@ var _CustomPage = (function () {
             var currPage = _Navigator.GetCurrentPage();
             if(true || window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"){
                 $('.exambtnsubmindiv').hide();
+                $('.exambtnretry').k_disable();
+                $('.levelbtnretry').k_disable();
+                
+
             }
             if (currPage.datalevel == 2) {
                 _ModuleCharts.DrawL2QuestionIntroChart();
@@ -774,6 +778,7 @@ var _CustomPage = (function () {
             }
 
             this.SetPageAccesibility();
+            $('.exambtnretry').k_disable();
         },
         //RA-6Sep18 - Function to set graph labels - start
         SetPageAccesibility:function(){
