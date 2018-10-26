@@ -369,8 +369,18 @@ var _Navigator = (function () {
                     _currentPageId = 'summary';
                 } 
             }
+
+            //once done remove after english code integration
+            var iamlucky = false;
+            if(_currentPageObject.datalevel == 1 || _currentPageObject.datalevel == 2 || (_currentPageObject.datalevel == 3 && _currentPageId == 'l4p1')) 
+            {
+                iamlucky = true;
+            }
+
             _currentPageObject = _NData[_currentPageId];
-            
+            if(iamlucky) {
+                _TradeSlider.UpdateInventoryTables();
+            }
             if (_currentPageObject.isStartPage != undefined && _currentPageObject.isStartPage) {
                 $("#linkprevious").k_disable();
                 $("#linknext").k_enable();
