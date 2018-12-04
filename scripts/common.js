@@ -89,13 +89,18 @@ var _Common = (function () {
             $(hiddenAnchor).attr("href", "#" + idToStartReading);
             $(hiddenAnchor)[0].click();
         },
-        ValidateDecimal:function (evt, obj) {
+        ValidateDecimal:function (evt, obj, locale) {
             var charCode = (evt.which) ? evt.which : event.keyCode
             var value = obj.val();
-            var dotcontains = value.indexOf(".") != -1;
-            if (dotcontains)
-                if (charCode == 46) return false;
-            if (charCode == 46) return true;
+
+            var specialChars = [{char: '.', code: 46}, {char: ',', code: 44}], specialCharIndex = 0;
+            if(locale == 'de-DE') {
+                specialCharIndex = 1;
+            }
+            var charcontains = value.indexOf(specialChars[specialCharIndex].char) != -1;
+            if (charcontains)
+                if (charCode == specialChars[specialCharIndex].code) return false;
+            if (charCode == specialChars[specialCharIndex].code) return true;
             if (charCode > 31 && (charCode < 48 || charCode > 57))
                 return false;
             return true;

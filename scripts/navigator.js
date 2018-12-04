@@ -685,7 +685,7 @@ var _Navigator = (function () {
             _Navigator.UpdateProgressBar();
             $(".pgBgItem[data-level='" + datalevel + "']").removeClass("pgBgItemComplete");
         },
-        ordinalInWord: function(t){var e=["Zeroth","Zuerst","Zweite","Dritte","Vierte","Fünfte","Sechste","Siebte","Achte","Neunte","Zehntel","Elfte","Zwölftel","Dreizehnte","Vierzehnte","Fünfzehnter","Sechzehnter","Siebzehnter","Achtzehntes","Neunzehntes","Zwanzigste"];return t<=20?e[t]:t%10==0?{30:"Dreißigste",40:"Vierzigsten",50:"Fünfzigste",60:"Sechziger",70:"Siebzigste",80:"Eightieth",90:"Neunzigstes",100:"Hundertstel"}[t]:{20:"Zwanzig ",30:"Dreißig ",40:"Vierzig ",50:"Fünfzig ",60:"Sechzig ",70:"Siebzig ",80:"Neunzig ",90:"Neunzig ",100:"Hundert "}[t-t%10]+e[t%10]},
+        ordinalInWord: function(t){var e=["Zeroth","ersten","zweiten","dritten","vierten","fünften","sechsten","siebten","Achte","neunten","Zehntel","Elfte","Zwölftel","Dreizehnte","Vierzehnte","Fünfzehnter","Sechzehnter","Siebzehnter","Achtzehntes","Neunzehntes","Zwanzigste"];return t<=20?e[t]:t%10==0?{30:"Dreißigste",40:"Vierzigsten",50:"Fünfzigste",60:"Sechziger",70:"Siebzigste",80:"Eightieth",90:"Neunzigstes",100:"Hundertstel"}[t]:{20:"Zwanzig ",30:"Dreißig ",40:"Vierzig ",50:"Fünfzig ",60:"Sechzig ",70:"Siebzig ",80:"Neunzig ",90:"Neunzig ",100:"Hundert "}[t-t%10]+e[t%10]},
         GetLastPageId: function (thisLevel) {  
             var prevPageId = 1;  
             for (var key in arrTreeSettings) { 

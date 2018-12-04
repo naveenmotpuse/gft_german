@@ -146,7 +146,7 @@ $(document).on("keyup", "input[type='text']", function(event) {
 });
 
 $(document).on("keypress", "input[type='text']", function(event) {
-  return _Common.ValidateDecimal(event, $(this));
+  return _Common.ValidateDecimal(event, $(this), 'de-DE'); //German standard
 });
 
 /*$(document).on("blur", "input[type='text']", function (event) {    

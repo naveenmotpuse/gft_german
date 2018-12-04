@@ -187,8 +187,8 @@
             if(activityDataArr.length>0){         
                 if(activityDataArr[activityDataArr.length-1]!=undefined && activityDataArr[activityDataArr.length-1].tradeData!=undefined){
                     var remDatatmp = activityDataArr[activityDataArr.length-1].tradeData.TR.remData;
-                    var userRemainData = remDatatmp.wood + " Holzscheite und " + remDatatmp.fish + " Kalorien in Form von Fisch oder ";
-                    var fridayRemainData = remDatatmp.fridaywood + " Holzscheite und " + remDatatmp.fridayfish + " Kalorien in Form von Fisch oder ";
+                    var userRemainData = remDatatmp.wood + " Holzscheite und " + remDatatmp.fish + " Kalorien ";
+                    var fridayRemainData = remDatatmp.fridaywood + " Holzscheite und " + remDatatmp.fridayfish + " Kalorien ";
                     $("#usertarget").text(userRemainData);
                     $("#fridaytarget").text(fridayRemainData);
                 }

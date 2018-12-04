@@ -177,7 +177,7 @@ var _ModuleCharts = (function () {
                     },
                     {
                         id: 'fridayppfser',
-                        name: "Freitags .PMK",
+                        name: "Freitags PMK",
                         type: 'spline',
                         lineWidth: 1,
                         data: fridayPPF,
@@ -293,7 +293,7 @@ var _ModuleCharts = (function () {
                     },
                     {
                         id: 'fridayppfser',
-                        name: "Freitags .PMK",
+                        name: "Freitags PMK",
                         type: 'spline',
                         lineWidth: 1,
                         data: _Scenario.GetFridayData(),
@@ -537,7 +537,7 @@ var _ModuleCharts = (function () {
                     },
                     {
                         id: 'fridayppfser',
-                        name: "Freitags .PMK",
+                        name: "Freitags PMK",
                         type: 'spline',
                         lineWidth: 0,
                         data: [],
@@ -700,7 +700,7 @@ var _ModuleCharts = (function () {
                 },
                 series: [{
                     id: 'fridayppfser',
-                    name: "Freitags .PMK",
+                    name: "Freitags PMK",
                     type: 'spline',
                     lineWidth: 1,
                     data: localfridayPPF,
