@@ -49,6 +49,9 @@
                 $("#div_question").load(pageUrl, function () {
                     $(this).hide().fadeIn("slow", function () {
                         OnQuestionLoad(qObj);
+                        setTimeout(function(){
+                            $('html,body').animate({ scrollTop: 0 }, 0, function () { });
+                        },0)
                         if (firstQuestion == _currentQuestionObj.Qid) {
                             if (isIpad) {
                                 _Common.SetReader(_Settings.hiddenAnchor, "progress");
@@ -67,6 +70,7 @@
             } else {
                 $("#linknext").k_enable();
             }
+            
         },
         SetOptionClone: function () {
             var elmarray = $("input[type='text']");
@@ -173,7 +177,7 @@
                 _CustomQuestion.OnFeedbackLoad()
                 _Question.DisplayRemainingDataInFeedback()
                 //_Question.DisplayRemDataOnPrev()
-                if(isWorse) {
+                if (isWorse) {
                     $("#div_feedback p:last").prepend($('<p class="popupNote"><span><i>Hinweis: Obwohl Sie diese Frage verpasst haben, weil Sie bei einem früheren Versuch ein besseres Ergebnis erzielt haben, wird der Punktestand aus diesem Versuch auf die Gesamtnote angerechnet.</i></span></p></br>'));
                 }
                 $("body").animate({
@@ -183,16 +187,16 @@
             });
         },
         DisplayRemainingDataInFeedback: function () {
-            var activityDataArr = DataStorage.getActivityData();   
-            if(activityDataArr.length>0){         
-                if(activityDataArr[activityDataArr.length-1]!=undefined && activityDataArr[activityDataArr.length-1].tradeData!=undefined){
-                    var remDatatmp = activityDataArr[activityDataArr.length-1].tradeData.TR.remData;
-                    var userRemainData = remDatatmp.wood + " Holzscheite und " + remDatatmp.fish + " Kalorien ";
-                    var fridayRemainData = remDatatmp.fridaywood + " Holzscheite und " + remDatatmp.fridayfish + " Kalorien ";
+            var activityDataArr = DataStorage.getActivityData();
+            if (activityDataArr.length > 0) {
+                if (activityDataArr[activityDataArr.length - 1] != undefined && activityDataArr[activityDataArr.length - 1].tradeData != undefined) {
+                    var remDatatmp = activityDataArr[activityDataArr.length - 1].tradeData.TR.remData;
+                    var userRemainData = _Common.En2Gr(remDatatmp.wood) + " Holzscheite und " + _Common.En2Gr(remDatatmp.fish) + " Kalorien ";
+                    var fridayRemainData = _Common.En2Gr(remDatatmp.fridaywood) + " Holzscheite und " + _Common.En2Gr(remDatatmp.fridayfish) + " Kalorien ";
                     $("#usertarget").text(userRemainData);
                     $("#fridaytarget").text(fridayRemainData);
                 }
-                
+
             }
         },
         LoadAlertFeedback: function () {
@@ -269,6 +273,11 @@
             $(".questionband").find("input").k_disable();
             for (var i = 0; i < totalOptions; i++) {
                 var _optD = _currentQuestionObj.options[i];
+
+
+                //   _optD.answer = _Common.En2Gr(_optD.answer);
+
+
                 var currPage = _Navigator.GetCurrentPage();
                 var attemptCurrentQuestionData_Options = undefined;
                 if (attemptCurrentQuestionData != undefined) {
@@ -334,8 +343,10 @@
                         isEmpty = true;
 
                     }
+                    inputval = _Common.Gr2En(inputval);
+
                     _optD.selectedAnswer = Number(inputval);
-                    if (_optD.answer != _optD.selectedAnswer) {
+                    if (Number(_optD.answer) != _optD.selectedAnswer) {
                         isAllCorrect = false;
                         _optD.points = 0.0;
                         _optD.isCorrect = false;
@@ -451,7 +462,8 @@
                         }
                     }
                 } else if (_optD.type == "input") {
-                    if (_optD.isCorrect && _optD.answer == $("#" + _optD.id).val()) {
+                    var inputval = _Common.Gr2En($("#" + _optD.id).val());
+                    if (_optD.isCorrect && _optD.answer ==inputval ) {
                         $("#" + _optD.id).css({
                             'color': ColorCodes.green,
                             'font-weight': 'bold'
@@ -471,10 +483,10 @@
                             'font-weight': 'bold'
                         })
                         if (isIOS || isIpad) {
-                            $("#" + _optD.id).after('<label class="incurrect_label"><i class="fa fa-times" style="padding:3px;color:' + ColorCodes.red + '"></i><span style="color:' + ColorCodes.green + ';font-weight:bold;font-size:16px;"> ' + _optD.answer + '</span> </label>');
+                            $("#" + _optD.id).after('<label class="incurrect_label"><i class="fa fa-times" style="padding:3px;color:' + ColorCodes.red + '"></i><span style="color:' + ColorCodes.green + ';font-weight:bold;font-size:16px;"> ' + _Common.En2Gr(_optD.answer) + '</span> </label>');
                             //$("#" + _optD.id).find("div").attr({ "role": "text", "aria-label": "you have entered " + $("#" + _optD.id).val() + " correct value is " + _optD.answer + " " + $('label[for="' + _optD.id + '"]').text() });
-                            
-                            var inputTxt =$("#" + _optD.id).closest("div").prev().text();
+
+                            var inputTxt = $("#" + _optD.id).closest("div").prev().text();
                             $(".question_txt").attr({ "role": "text", "aria-label": inputTxt + " you have entered " + $("#" + _optD.id).val() + " correct value is " + _optD.answer + " " + $('label[for="' + _optD.id + '"]').text() });
                         } else {
                             $("#" + _optD.id).after('<label class="incurrect_label"><i class="fa fa-times" style="padding:3px;color:' + ColorCodes.red + '"></i><span style="color:' + ColorCodes.green + ';font-weight:bold;font-size:16px;"> ' + _Common.En2Gr(_optD.answer) + '</span> </label>');

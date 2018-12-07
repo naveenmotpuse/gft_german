@@ -419,7 +419,7 @@ var _Navigator = (function () {
                     $(".main-content").load(pageUrl, function () {
                         $(this).fadeTo(600, 1)
                         OnPageLoad(jsonObj, buttonPressed);
-                        
+                       
                         if (isIpad) {
                             _Common.SetReader(_Settings.hiddenAnchor, "progress");
                         } else {
