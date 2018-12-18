@@ -242,7 +242,7 @@
                     } else if (_optD.type == "input") {
 
                         var inputval = _optD.selectedAnswer;
-                        $("#" + _optD.id).val(_optD.selectedAnswer);
+                        $("#" + _optD.id).val(_Common.En2Gr(_optD.selectedAnswer));
                         if (_optD.answer != _optD.selectedAnswer) {
                             $("#" + _optD.id).addClass("incorrect");
                         } else {
@@ -462,8 +462,8 @@
                         }
                     }
                 } else if (_optD.type == "input") {
-                    var inputval = _Common.Gr2En($("#" + _optD.id).val());
-                    if (_optD.isCorrect && _optD.answer ==inputval ) {
+                    var inputval = $("#" + _optD.id).val();
+                    if (_optD.isCorrect && _Common.En2Gr(_optD.answer) ==inputval ) {
                         $("#" + _optD.id).css({
                             'color': ColorCodes.green,
                             'font-weight': 'bold'

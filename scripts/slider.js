@@ -636,6 +636,7 @@ var _TradeSlider = (function () {
 
             $("#onewoodfor-fish").text(TradeResults.onewoodfor);
             var currPage = _Navigator.GetCurrentPage();
+            debugger;
             if (currPage.datalevel == 4 && _Scenario.GetScenarioIndex() == 1) {
                 $("#givefish-range").attr("max", (TradeSettings.yourfishcals + TradeResults.remData.fish));
                 $("#consumption-wood-range").attr("max", (TradeSettings.fridaywoodlogs + TradeResults.remData.fridaywood));
@@ -644,7 +645,7 @@ var _TradeSlider = (function () {
                 $("#consumption-fish-range").attr("max", (TradeSettings.yourfishcals + TradeResults.remData.fish));
                 $(".consumption-fish.r_label").text((TradeSettings.yourfishcals + TradeResults.remData.fish));
                 $("#givefish-cals").text(TradeResults.givefish);
-                $("#receivewood-logs").text(TradeResults.receivewood);
+                $("#receivewood-logs").text(_Common.En2Gr(TradeResults.receivewood));
             } else {
                 //$("#givewood-range").attr("max", (TradeSettings.yourwoodlogs + TradeResults.remData.wood));
                 //$(".givewood.r_label").text((TradeSettings.yourwoodlogs + TradeResults.remData.wood));
@@ -658,7 +659,7 @@ var _TradeSlider = (function () {
                 console.log("+++===" + TradeResults.receivefish);
                 $("#receivefish-cals").text(TradeResults.receivefish).attr("aria-label",TradeResults.consumptionfish);
             }
-            $("#consumption-wood").text(TradeResults.consumptionwood);
+            $("#consumption-wood").text(_Common.En2Gr(TradeResults.consumptionwood));
             $("#consumption-fish").text(TradeResults.consumptionfish);
             $("#consumption-wood-range").val(TradeResults.consumptionwood).attr("aria-valuenow",TradeResults.consumptionwood);
             $("#consumption-fish-range").val(TradeResults.consumptionfish).attr("aria-valuenow",TradeResults.consumptionfish);
