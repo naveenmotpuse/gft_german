@@ -49,9 +49,9 @@
                 $("#div_question").load(pageUrl, function () {
                     $(this).hide().fadeIn("slow", function () {
                         OnQuestionLoad(qObj);
-                        setTimeout(function(){
+                        setTimeout(function () {
                             $('html,body').animate({ scrollTop: 0 }, 0, function () { });
-                        },0)
+                        }, 0)
                         if (firstQuestion == _currentQuestionObj.Qid) {
                             if (isIpad) {
                                 _Common.SetReader(_Settings.hiddenAnchor, "progress");
@@ -70,7 +70,7 @@
             } else {
                 $("#linknext").k_enable();
             }
-            
+
         },
         SetOptionClone: function () {
             var elmarray = $("input[type='text']");
@@ -240,13 +240,25 @@
                         }
                         $("#" + _optD.selectedId).attr('checked', 'checked');
                     } else if (_optD.type == "input") {
-
-                        var inputval = _optD.selectedAnswer;
-                        $("#" + _optD.id).val(_Common.En2Gr(_optD.selectedAnswer));
-                        if (_optD.answer != _optD.selectedAnswer) {
-                            $("#" + _optD.id).addClass("incorrect");
-                        } else {
-                            $("#" + _optD.id).addClass("correct")
+                        // if ($("#" + _optD.id).hasClass("l1q1")) {
+                        //     $("#" + _optD.id).val(_optD.selectedAnswer);      
+                        //     if (_Common.En2Gr(_optD.answer) != _optD.selectedAnswer) {
+                        //         $("#" + _optD.id).addClass("incorrect");
+                        //     }
+                        //     else
+                        //     {
+                        //         $("#" + _optD.id).addClass("correct")
+                        //     }
+                        // }
+                        // else
+                        {
+                            var inputval = _optD.selectedAnswer;
+                            $("#" + _optD.id).val(_Common.En2Gr(_optD.selectedAnswer));                            
+                            if (_optD.answer != _optD.selectedAnswer) {
+                                $("#" + _optD.id).addClass("incorrect");
+                            } else {
+                                $("#" + _optD.id).addClass("correct")
+                            }
                         }
                     }
                 }
@@ -257,6 +269,7 @@
             }
         },
         CheckAnswer: function () {
+            debugger;
             var isWorsen = false;
             var _qPoints = 0.0;
             var isAllCorrect = true;
@@ -343,28 +356,55 @@
                         isEmpty = true;
 
                     }
-                    inputval = _Common.Gr2En(inputval);
-
-                    _optD.selectedAnswer = Number(inputval);
-                    if (Number(_optD.answer) != _optD.selectedAnswer) {
-                        isAllCorrect = false;
-                        _optD.points = 0.0;
-                        _optD.isCorrect = false;
-                        $("#" + _optD.id).addClass("incorrect");
-                        if (attemptCurrentQuestionData_Options != undefined && attemptCurrentQuestionData_Options.isCorrect) {
-                            _optD.selectedAnswer = attemptCurrentQuestionData_Options.selectedAnswer;
+                   
+                    // if ($("#" + _optD.id).hasClass("l1q1")) {
+                        
+                    //     _optD.selectedAnswer = inputval;
+                    //     if (_Common.En2Gr(_optD.answer) != _optD.selectedAnswer) {
+                    //         isAllCorrect = false;
+                    //         _optD.points = 0.0;
+                    //         _optD.isCorrect = false;
+                    //         $("#" + _optD.id).addClass("incorrect");
+                    //         if (attemptCurrentQuestionData_Options != undefined && attemptCurrentQuestionData_Options.isCorrect) {
+                    //             _optD.selectedAnswer = attemptCurrentQuestionData_Options.selectedAnswer;
+                    //             var optPoints = parseFloat(_currentQuestionObj.totalPoints) / parseFloat(totalOptions)
+                    //             _optD.points = optPoints;
+                    //             _optD.isCorrect = true;
+                    //             _qPoints += optPoints;
+                    //             isWorsen = true;
+                    //         }
+                    //     } else {
+                    //         var optPoints = parseFloat(_currentQuestionObj.totalPoints) / parseFloat(totalOptions)
+                    //         _optD.points = optPoints;
+                    //         _optD.isCorrect = true;
+                    //         _qPoints += optPoints;
+                    //         $("#" + _optD.id).addClass("correct")
+                    //     }
+                    // }
+                    // else
+                    {
+                        inputval = _Common.Gr2En(inputval);
+                        _optD.selectedAnswer = Number(inputval);
+                        if (Number(_optD.answer) != _optD.selectedAnswer) {
+                            isAllCorrect = false;
+                            _optD.points = 0.0;
+                            _optD.isCorrect = false;
+                            $("#" + _optD.id).addClass("incorrect");
+                            if (attemptCurrentQuestionData_Options != undefined && attemptCurrentQuestionData_Options.isCorrect) {
+                                _optD.selectedAnswer = attemptCurrentQuestionData_Options.selectedAnswer;
+                                var optPoints = parseFloat(_currentQuestionObj.totalPoints) / parseFloat(totalOptions)
+                                _optD.points = optPoints;
+                                _optD.isCorrect = true;
+                                _qPoints += optPoints;
+                                isWorsen = true;
+                            }
+                        } else {
                             var optPoints = parseFloat(_currentQuestionObj.totalPoints) / parseFloat(totalOptions)
                             _optD.points = optPoints;
                             _optD.isCorrect = true;
                             _qPoints += optPoints;
-                            isWorsen = true;
+                            $("#" + _optD.id).addClass("correct")
                         }
-                    } else {
-                        var optPoints = parseFloat(_currentQuestionObj.totalPoints) / parseFloat(totalOptions)
-                        _optD.points = optPoints;
-                        _optD.isCorrect = true;
-                        _qPoints += optPoints;
-                        $("#" + _optD.id).addClass("correct")
                     }
                 }
             }
@@ -463,7 +503,8 @@
                     }
                 } else if (_optD.type == "input") {
                     var inputval = $("#" + _optD.id).val();
-                    if (_optD.isCorrect && _Common.En2Gr(_optD.answer) ==inputval ) {
+
+                    if ((_optD.isCorrect && _Common.En2Gr(_optD.answer) == inputval) || ( $("#" + _optD.id).hasClass("l1q1") && Number(_optD.answer) ==  Number(_Common.Gr2En(inputval)) )) { //uk added code for accepting values 3.000 or 3,000
                         $("#" + _optD.id).css({
                             'color': ColorCodes.green,
                             'font-weight': 'bold'

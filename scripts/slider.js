@@ -872,7 +872,7 @@ var _TradeSlider = (function () {
             var resettbl = true;
             if (tDataMap == undefined && yDataMap == undefined) {
                 resettbl = true;
-            } else if (tDataMap != undefined && tDataMap.tradeData.TR != undefined) {
+            } else if (tDataMap != undefined && tDataMap.tradeData!=undefined && tDataMap.tradeData.TR != undefined) {
                 resettbl = false;
                 $("td#woodstartofdaytoday").text(tDataMap.tradeData.TR.remData.wood);
                 $("td#fishstartofdaytoday").text(tDataMap.tradeData.TR.remData.fish);
@@ -915,7 +915,7 @@ var _TradeSlider = (function () {
             var fishCollection = [];
             for (var i in activityData) {
                 var data = activityData[i];
-                if (data.tradeData.TR != undefined) {
+                if (data.tradeData!=undefined && data.tradeData.TR != undefined) {
                     woodColletion.push([data.day, Number(data.tradeData.TR.remData.wood)]);
                     fishCollection.push([data.day, Number(data.tradeData.TR.remData.fish)]);
                 }

@@ -125,6 +125,8 @@ $(document).on("click", ".bookmark", function(event) {
   _Navigator.Start();
 });
 $(document).on("keyup", "input[type='text']", function(event) {
+  if($(this).hasClass("l1q1"))
+  return;
   var max = $(this).attr("max");
   var min = $(this).attr("min");
   if (max != undefined && min != undefined) {
@@ -146,6 +148,8 @@ $(document).on("keyup", "input[type='text']", function(event) {
 });
 
 $(document).on("keypress", "input[type='text']", function(event) {
+  if($(this).hasClass("l1q1"))
+    return;
   return _Common.ValidateDecimal(event, $(this), 'de-DE'); //German standard
 });
 
