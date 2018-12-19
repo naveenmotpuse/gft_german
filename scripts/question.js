@@ -504,7 +504,7 @@
                 } else if (_optD.type == "input") {
                     var inputval = $("#" + _optD.id).val();
 
-                    if ((_optD.isCorrect && _Common.En2Gr(_optD.answer) == inputval) || ( $("#" + _optD.id).hasClass("l1q1") && Number(_optD.answer) ==  Number(_Common.Gr2En(inputval)) )) { //uk added code for accepting values 3.000 or 3,000
+                    if ((_optD.isCorrect && _Common.En2Gr(_optD.answer) == inputval) ||( Number( _optD.answer) ==  Number( _Common.Gr2En(inputval)) )|| ( $("#" + _optD.id).hasClass("l1q1") && Number(_optD.answer) ==  Number(_Common.Gr2En(inputval)) )) { //uk added code for accepting values 3.000 or 3,000
                         $("#" + _optD.id).css({
                             'color': ColorCodes.green,
                             'font-weight': 'bold'
